@@ -1,0 +1,15 @@
+C:\Users\HP\Desktop\P233\P233\Edu.UI\Edu.DataAccess\bin\Debug\net6.0\Edu.DataAccess.deps.json
+C:\Users\HP\Desktop\P233\P233\Edu.UI\Edu.DataAccess\bin\Debug\net6.0\Edu.DataAccess.dll
+C:\Users\HP\Desktop\P233\P233\Edu.UI\Edu.DataAccess\bin\Debug\net6.0\Edu.DataAccess.pdb
+C:\Users\HP\Desktop\P233\P233\Edu.UI\Edu.DataAccess\bin\Debug\net6.0\Edu.Core.dll
+C:\Users\HP\Desktop\P233\P233\Edu.UI\Edu.DataAccess\bin\Debug\net6.0\Edu.Core.pdb
+C:\Users\HP\Desktop\P233\P233\Edu.UI\Edu.DataAccess\obj\Debug\net6.0\Edu.DataAccess.csproj.AssemblyReference.cache
+C:\Users\HP\Desktop\P233\P233\Edu.UI\Edu.DataAccess\obj\Debug\net6.0\Edu.DataAccess.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\HP\Desktop\P233\P233\Edu.UI\Edu.DataAccess\obj\Debug\net6.0\Edu.DataAccess.AssemblyInfoInputs.cache
+C:\Users\HP\Desktop\P233\P233\Edu.UI\Edu.DataAccess\obj\Debug\net6.0\Edu.DataAccess.AssemblyInfo.cs
+C:\Users\HP\Desktop\P233\P233\Edu.UI\Edu.DataAccess\obj\Debug\net6.0\Edu.DataAccess.csproj.CoreCompileInputs.cache
+C:\Users\HP\Desktop\P233\P233\Edu.UI\Edu.DataAccess\obj\Debug\net6.0\Edu.DataAccess.csproj.CopyComplete
+C:\Users\HP\Desktop\P233\P233\Edu.UI\Edu.DataAccess\obj\Debug\net6.0\Edu.DataAccess.dll
+C:\Users\HP\Desktop\P233\P233\Edu.UI\Edu.DataAccess\obj\Debug\net6.0\refint\Edu.DataAccess.dll
+C:\Users\HP\Desktop\P233\P233\Edu.UI\Edu.DataAccess\obj\Debug\net6.0\Edu.DataAccess.pdb
+C:\Users\HP\Desktop\P233\P233\Edu.UI\Edu.DataAccess\obj\Debug\net6.0\ref\Edu.DataAccess.dll

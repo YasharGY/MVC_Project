@@ -1,0 +1,12 @@
+C:\Users\HP\Desktop\P233\P233\Edu.UI\Edu.Core\bin\Debug\net6.0\Edu.Core.deps.json
+C:\Users\HP\Desktop\P233\P233\Edu.UI\Edu.Core\bin\Debug\net6.0\Edu.Core.dll
+C:\Users\HP\Desktop\P233\P233\Edu.UI\Edu.Core\bin\Debug\net6.0\Edu.Core.pdb
+C:\Users\HP\Desktop\P233\P233\Edu.UI\Edu.Core\obj\Debug\net6.0\Edu.Core.csproj.AssemblyReference.cache
+C:\Users\HP\Desktop\P233\P233\Edu.UI\Edu.Core\obj\Debug\net6.0\Edu.Core.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\HP\Desktop\P233\P233\Edu.UI\Edu.Core\obj\Debug\net6.0\Edu.Core.AssemblyInfoInputs.cache
+C:\Users\HP\Desktop\P233\P233\Edu.UI\Edu.Core\obj\Debug\net6.0\Edu.Core.AssemblyInfo.cs
+C:\Users\HP\Desktop\P233\P233\Edu.UI\Edu.Core\obj\Debug\net6.0\Edu.Core.csproj.CoreCompileInputs.cache
+C:\Users\HP\Desktop\P233\P233\Edu.UI\Edu.Core\obj\Debug\net6.0\Edu.Core.dll
+C:\Users\HP\Desktop\P233\P233\Edu.UI\Edu.Core\obj\Debug\net6.0\refint\Edu.Core.dll
+C:\Users\HP\Desktop\P233\P233\Edu.UI\Edu.Core\obj\Debug\net6.0\Edu.Core.pdb
+C:\Users\HP\Desktop\P233\P233\Edu.UI\Edu.Core\obj\Debug\net6.0\ref\Edu.Core.dll

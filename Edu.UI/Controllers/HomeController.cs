@@ -18,7 +18,9 @@ namespace EduApp.Controllers
         {
             HomeVM homeVM = new()
             {
-                Sliders = await _context.Sliders.ToListAsync()
+                Sliders = await _context.Sliders.ToListAsync(),
+                Notices = await _context.Notices.ToListAsync(),
+                Rights = await _context.Rights.ToListAsync()
             };
             return View(homeVM);
         }

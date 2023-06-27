@@ -11,25 +11,25 @@
 		@foreach (var slider in Model.Sliders)
 		{
 			<div class="single-slide item" style="background-image: url(@slider.ImagePath)">
-			<!-- Start Slider Content -->
-			<div class="slider-content-area">
-				<div class="container">
-					<div class="row">
-						<div class="col-lg-7 col-md-offset-left-5">
-							<div class="slide-content-wrapper">
-								<div class="slide-content">
-									<h3>@slider.Title </h3>
-									<h2>@slider.Title2 </h2>
-									<p>@slider.Description </p>
-									<a class="default-btn" href="about.html">Learn more</a>
+				<!-- Start Slider Content -->
+				<div class="slider-content-area">
+					<div class="container">
+						<div class="row">
+							<div class="col-lg-7 col-md-offset-left-5">
+								<div class="slide-content-wrapper">
+									<div class="slide-content">
+										<h3>@slider.Title </h3>
+										<h2>@slider.Title2 </h2>
+										<p>@slider.Description </p>
+										<a class="default-btn" href="about.html">Learn more</a>
+									</div>
 								</div>
 							</div>
 						</div>
 					</div>
 				</div>
+				<!-- Start Slider Content -->
 			</div>
-			<!-- Start Slider Content -->
-		</div>
 		}
 	</div>
 </section>
@@ -41,43 +41,19 @@
 			<div class="col-md-6">
 				<div class="notice-left">
 					<h3>notice board</h3>
-					<div class="single-notice-left mb-25 pb-25">
-						<h4>5, June 2023</h4>
-						<p>I must explain to you how all this mistaken idea of denouncing plasure and praising pain was born and I will give you a complete </p>
-					</div>
-					<div class="single-notice-left mb-25 pb-25">
-						<h4>4, June 2023</h4>
-						<p>I must explain to you how all this mistaken idea of denouncing plasure and praising pain was born and I will give you a complete </p>
-					</div>
-					<div class="single-notice-left pb-75">
-						<h4>3, June 2023</h4>
-						<p>I must explain to you how all this mistaken idea of denouncing plasure and praising pain was born and I will give you a complete </p>
-					</div>
-					<div class="single-notice-left mb-25 pb-25">
-						<h4>5, June 2023</h4>
-						<p>I must explain to you how all this mistaken idea of denouncing plasure and praising pain was born and I will give you a complete </p>
-					</div>
-					<div class="single-notice-left mb-25 pb-25">
-						<h4>4, June 2023</h4>
-						<p>I must explain to you how all this mistaken idea of denouncing plasure and praising pain was born and I will give you a complete </p>
-					</div>
-					<div class="single-notice-left pb-70">
-						<h4>3, June 2023</h4>
-						<p>I must explain to you how all this mistaken idea of denouncing plasure and praising pain was born and I will give you a complete </p>
-					</div>
-					<div class="single-notice-left mb-25 pb-25">
-						<h4>5, June 2023</h4>
-						<p>I must explain to you how all this mistaken idea of denouncing plasure and praising pain was born and I will give you a complete </p>
-					</div>
-					<div class="single-notice-left mb-25 pb-25">
-						<h4>4, June 2023</h4>
-						<p>I must explain to you how all this mistaken idea of denouncing plasure and praising pain was born and I will give you a complete </p>
-					</div>
-					<div class="single-notice-left pb-70">
-						<h4>3, June 2023</h4>
-						<p>I must explain to you how all this mistaken idea of denouncing plasure and praising pain was born and I will give you a complete </p>
-					</div>
+					@foreach (var notices in Model.Notices)
+					{
+						<div class="single-notice-left mb-25 pb-25 @(notices.Id==Model.Notices.ElementAt(0).Id ? "" : "pb-70" )">
+							<h4>@notices.Date</h4>
+							<p>@notices.Description </p>
+						</div>
+						<div class="single-notice-left pb-75">
+							<h4>@notices.Date</h4>
+							<p>@notices.Description </p>
+						</div>
+					}
 				</div>
+
 			</div>
 			<div class="col-md-6">
 				<div class="notice-right">

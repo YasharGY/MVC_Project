@@ -9,7 +9,7 @@ public class NoticeBoard : IEntity
 {
 	public int Id { get; set; }
 		
-	public string Title { get; set; } 
+	public string? Title { get; set; } 
 	[Required, MaxLength(20)]
 	public string Date { get; set; }=null!;
 	[Required, MaxLength(200)]

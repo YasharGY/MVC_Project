@@ -12,4 +12,5 @@ public class AppDbContext:DbContext
 	public DbSet<Slider> Sliders { get; set; } = null!;
 	public DbSet<NoticeBoard> Notices { get; set; } 
 	public DbSet<RightBoard> Rights { get; set; } 
+	public DbSet<CoursesOffer> Courses { get; set; } 
 }

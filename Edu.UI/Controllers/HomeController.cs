@@ -20,7 +20,8 @@ namespace EduApp.Controllers
             {
                 Sliders = await _context.Sliders.ToListAsync(),
                 Notices = await _context.Notices.ToListAsync(),
-                Rights = await _context.Rights.ToListAsync()
+                Rights = await _context.Rights.ToListAsync(),
+                Courses = await _context.Courses.ToListAsync(),
             };
             return View(homeVM);
         }

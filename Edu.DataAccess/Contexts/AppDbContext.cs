@@ -15,4 +15,5 @@ public class AppDbContext:DbContext
 	public DbSet<CoursesOffer> Courses { get; set; } 
 	public DbSet<LeftEvent> LEvents { get; set; }
 	public DbSet<RightEvent> REvents { get; set; }
+	public DbSet<Testimonial> Testimonials { get; set; }
 }

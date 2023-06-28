@@ -10,5 +10,6 @@ public class HomeVM
 	public IEnumerable<CoursesOffer> Courses { get; set;}
 	public IEnumerable<LeftEvent> LeftEvents { get; set; }
 	public IEnumerable<RightEvent> RightEvents { get; set; }
+	public IEnumerable<Testimonial> Testimonials { get; set; }
 
 }

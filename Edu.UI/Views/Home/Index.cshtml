@@ -1,7 +1,10 @@
 ﻿@model HomeVM
 
+
 @{
 	ViewData["Title"] = "Index";
+	
+  int count=0;
 }
 
 <!-- Background Area Start -->
@@ -43,7 +46,7 @@
 					<h3>notice board</h3>
 					@foreach (var notices in Model.Notices)
 					{
-						<div class="single-notice-left mb-25 pb-25 @(notices.Id==Model.Notices.ElementAt(0).Id ? "" : "pb-70" )">
+						<div class="single-notice-left mb-25 pb-25@(count<=5 ? "" : "pb-70")">
 							<h4>@notices.Date</h4>
 							<p>@notices.Description </p>
 						</div>
@@ -139,74 +142,27 @@
 		</div>
 		<div class="row">
 			<div class="col-lg-6">
-				<div class="single-event mb-35">
-					<div class="event-date">
-						<h3><a href="event-details.html">20 <span>June</span></a></h3>
-					</div>
-					<div class="event-content text-start">
-						<div class="event-content-left">
-							<h4><a href="event-details.html">MICRO BIOLOGICAL WORKSHOP</a></h4>
-							<ul>
-								<li><i class="fa fa-clock-o"></i>9.00 AM - 4.45 PM</li>
-								<li><i class="fa fa-map-marker"></i>New Yourk City</li>
-							</ul>
+				@foreach (var levents in Model.LeftEvents)
+				{
+					<div class="single-event mb-35 @(count<=3 ? "" : "single-event")">
+						<div class="event-date">
+							<h3><a href="event-details.html">@levents.Day <span>@levents.Month</span></a></h3>
 						</div>
-						<div class="event-content-right">
-							<a class="default-btn" href="event-details.html">join now</a>
-						</div>
-					</div>
-				</div>
-				<div class="single-event mb-35">
-					<div class="event-date">
-						<h3><a href="event-details.html">18 <span>June</span></a></h3>
-					</div>
-					<div class="event-content text-start">
-						<div class="event-content-left">
-							<h4><a href="event-details.html">ADVANCE PHP WORKSHOP</a></h4>
-							<ul>
-								<li><i class="fa fa-clock-o"></i>9.00 AM - 4.45 PM</li>
-								<li><i class="fa fa-map-marker"></i>New Yourk City</li>
-							</ul>
-						</div>
-						<div class="event-content-right">
-							<a class="default-btn" href="event-details.html">join now</a>
+						<div class="event-content text-start">
+							<div class="event-content-left">
+								<h4><a href="event-details.html">@levents.Title</a></h4>
+								<ul>
+									<li><i class="fa fa-clock-o"></i>@levents.Datetime</li>
+									<li><i class="fa fa-map-marker"></i>@levents.Location</li>
+								</ul>
+							</div>
+							<div class="event-content-right">
+								<a class="default-btn" href="event-details.html">join now</a>
+							</div>
 						</div>
 					</div>
-				</div>
-				<div class="single-event mb-35">
-					<div class="event-date">
-						<h3><a href="event-details.html">16 <span>June</span></a></h3>
-					</div>
-					<div class="event-content text-start">
-						<div class="event-content-left">
-							<h4><a href="event-details.html">LEARN ENGLISH HISTORY</a></h4>
-							<ul>
-								<li><i class="fa fa-clock-o"></i>9.00 AM - 4.45 PM</li>
-								<li><i class="fa fa-map-marker"></i>New Yourk City</li>
-							</ul>
-						</div>
-						<div class="event-content-right">
-							<a class="default-btn" href="event-details.html">join now</a>
-						</div>
-					</div>
-				</div>
-				<div class="single-event">
-					<div class="event-date">
-						<h3><a href="event-details.html">14 <span>June</span></a></h3>
-					</div>
-					<div class="event-content text-start">
-						<div class="event-content-left">
-							<h4><a href="event-details.html">GLOBAL ECONOMIC CONFERENCE</a></h4>
-							<ul>
-								<li><i class="fa fa-clock-o"></i>9.00 AM - 4.45 PM</li>
-								<li><i class="fa fa-map-marker"></i>New Yourk City</li>
-							</ul>
-						</div>
-						<div class="event-content-right">
-							<a class="default-btn" href="event-details.html">join now</a>
-						</div>
-					</div>
-				</div>
+				}
+				
 			</div>
 			<div class="col-lg-6 pt-5 pt-lg-0">
 				<div class="single-event mb-35">

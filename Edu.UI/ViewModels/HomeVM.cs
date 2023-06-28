@@ -8,5 +8,7 @@ public class HomeVM
 	public IEnumerable<NoticeBoard> Notices { get; set; }
 	public IEnumerable<RightBoard> Rights { get; set; }
 	public IEnumerable<CoursesOffer> Courses { get; set;}
+	public IEnumerable<LeftEvent> LeftEvents { get; set; }
+	public IEnumerable<RightEvent> RightEvents { get; set; }
 
 }

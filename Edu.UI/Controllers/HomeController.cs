@@ -22,6 +22,8 @@ namespace EduApp.Controllers
                 Notices = await _context.Notices.ToListAsync(),
                 Rights = await _context.Rights.ToListAsync(),
                 Courses = await _context.Courses.ToListAsync(),
+                LeftEvents = await _context.LEvents.ToListAsync(),
+                RightEvents = await _context.REvents.ToListAsync(),
             };
             return View(homeVM);
         }

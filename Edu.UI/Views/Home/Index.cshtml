@@ -196,20 +196,24 @@
 	<div class="container">
 		<div class="row">
 			<div class="testimonial-owl owl-theme owl-carousel">
-				<div class="col-lg-8 offset-lg-2">
+				@foreach (var testimonial in Model.Testimonials)
+				{
+					<div class="col-lg-8 offset-lg-2">
 					<div class="single-testimonial">
 						<div class="testimonial-info">
 							<div class="testimonial-img">
-								<img src="~/assets/img/testimonial/testimonial.jpg" alt="testimonial">
+								<img src="@testimonial.ImagePath" alt="testimonial">
 							</div>
 							<div class="testimonial-content">
-								<p>I must explain to you how all this mistaken idea of denoung pleure and praising pain was born and I will give you a coete account of the system, and expound the actual</p>
-								<h4>David Morgan</h4>
-								<h5>Student, CSE</h5>
+								<p>@testimonial.Information</p>
+								<h4>@testimonial.Name</h4>
+								<h5>@testimonial.Position</h5>
 							</div>
 						</div>
 					</div>
 				</div>
+				}
+				
 			</div>
 		</div>
 	</div>
@@ -227,63 +231,30 @@
 			</div>
 		</div>
 		<div class="row">
-			<div class="col-lg-4 col-md-6">
-				<div class="single-blog">
-					<div class="blog-img">
-						<a href="blog-details.html"><img src="~/assets/img/blog/blog1.jpg" alt="blog"></a>
-						<div class="blog-hover">
-							<a href="blog-details.html"><i class="fa fa-link"></i></a>
+			@foreach (var blogs in Model.Blogs)
+			{
+				<div class="col-lg-4 col-md-6">
+					<div class="single-blog">
+						<div class="blog-img">
+							<a href="blog-details.html"><img src="@blogs.ImagePath" alt="blog"></a>
+							<div class="blog-hover">
+								<a href="blog-details.html"><i class="fa fa-link"></i></a>
+							</div>
 						</div>
-					</div>
-					<div class="blog-content">
-						<div class="blog-top">
-							<p>By Alex  /  June 20, 2023  /  <i class="fa fa-comments-o"></i> 4</p>
-						</div>
-						<div class="blog-bottom">
-							<h2><a href="blog-details.html">I must explain to you how all this a mistaken idea </a></h2>
-							<a href="blog-details.html">read more</a>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="col-lg-4 col-md-6">
-				<div class="single-blog">
-					<div class="blog-img">
-						<a href="blog-details.html"><img src="~/assets/img/blog/blog2.jpg" alt="blog"></a>
-						<div class="blog-hover">
-							<a href="blog-details.html"><i class="fa fa-link"></i></a>
-						</div>
-					</div>
-					<div class="blog-content">
-						<div class="blog-top">
-							<p>By Alex  /  June 20, 2023  /  <i class="fa fa-comments-o"></i> 4</p>
-						</div>
-						<div class="blog-bottom">
-							<h2><a href="blog-details.html">I must explain to you how all this a mistaken idea </a></h2>
-							<a href="blog-details.html">read more</a>
+						<div class="blog-content">
+							<div class="blog-top">
+								<p>@blogs.ByWhom  /  @blogs.Date  /  <i class="fa fa-comments-o"></i> 4</p>
+							</div>
+							<div class="blog-bottom">
+								<h2><a href="blog-details.html">@blogs.Description </a></h2>
+								<a href="blog-details.html">read more</a>
+							</div>
 						</div>
 					</div>
 				</div>
-			</div>
-			<div class="col-lg-4 col-md-6">
-				<div class="single-blog mb-0">
-					<div class="blog-img">
-						<a href="blog-details.html"><img src="~/assets/img/blog/blog3.jpg" alt="blog"></a>
-						<div class="blog-hover">
-							<a href="blog-details.html"><i class="fa fa-link"></i></a>
-						</div>
-					</div>
-					<div class="blog-content">
-						<div class="blog-top">
-							<p>By Alex  /  June 20, 2023  /  <i class="fa fa-comments-o"></i> 4</p>
-						</div>
-						<div class="blog-bottom">
-							<h2><a href="blog-details.html">I must explain to you how all this a mistaken idea </a></h2>
-							<a href="blog-details.html">read more</a>
-						</div>
-					</div>
-				</div>
-			</div>
+			}	
+			
+		
 		</div>
 	</div>
 </div>

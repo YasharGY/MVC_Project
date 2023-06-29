@@ -25,6 +25,7 @@ namespace EduApp.Controllers
                 LeftEvents = await _context.LEvents.ToListAsync(),
                 RightEvents = await _context.REvents.ToListAsync(),
                 Testimonials = await _context.Testimonials.ToListAsync(),
+                Blogs = await _context.Blogs.ToListAsync(),
             };
             return View(homeVM);
         }

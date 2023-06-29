@@ -16,4 +16,5 @@ public class AppDbContext:DbContext
 	public DbSet<LeftEvent> LEvents { get; set; }
 	public DbSet<RightEvent> REvents { get; set; }
 	public DbSet<Testimonial> Testimonials { get; set; }
+	public DbSet<Blog> Blogs { get; set; }
 }

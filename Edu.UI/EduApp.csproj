@@ -20,8 +20,6 @@
 
   <ItemGroup>
     <Folder Include="Areas\EduAdmin\Data\" />
-    <Folder Include="Areas\EduAdmin\Models\" />
-    <Folder Include="wwwroot\admin\" />
   </ItemGroup>
 
 </Project>

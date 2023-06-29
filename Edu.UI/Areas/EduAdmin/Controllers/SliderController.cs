@@ -48,4 +48,18 @@ public class SliderController : Controller
         return RedirectToAction(nameof(Index));
     }
 
+	
+
+
+	public async Task<IActionResult> Delete(int id)
+	{
+		Slider sliderdb = await _context.Sliders.FindAsync(id);
+		if (sliderdb == null) 
+		{
+			return NotFound();
+		
+		}
+		return View(sliderdb);
+	}
+
 }

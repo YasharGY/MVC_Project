@@ -62,4 +62,19 @@ public class SliderController : Controller
 		return View(sliderdb);
 	}
 
+	[HttpPost]
+	[ActionName("Delete")]
+    public async Task<IActionResult> DeletePost(int id)
+    {
+        Slider sliderdb = await _context.Sliders.FindAsync(id);
+        if (sliderdb == null)
+        {
+            return NotFound();
+
+        }
+		_context.Sliders.Remove(sliderdb);
+		await _context.SaveChangesAsync();
+		return RedirectToAction(nameof(Index));
+    }
+
 }

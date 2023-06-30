@@ -1,0 +1,20 @@
+﻿@model NoticeBoard
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<div class="col-xl-6">
+    <div class="card">
+        <div class="card-body">
+            <h4 class="card-title">@Model.Title</h4>
+            <p class="card-title-desc">@Model.Description</p>
+            <div class="d-flex flex-wrap gap-2">
+                <form method="post" asp-route-id="@Model.Id">
+                    <button type="Submit" class="btn btn-danger waves-effect waves-light">Delete</button>
+                </form>
+                <button asp-action="Index" class="btn btn-light waves-effect">Back to List</button>
+            </div>
+        </div>
+    </div>
+</div>
+

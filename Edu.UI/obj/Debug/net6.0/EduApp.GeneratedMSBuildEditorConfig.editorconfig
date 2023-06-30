@@ -24,8 +24,16 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcRWR1QWRtaW5cVmlld3NcTm90aWNlc1xDcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/HP/Desktop/P233/P233/Edu.UI/Edu.UI/Areas/EduAdmin/Views/Notices/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcRWR1QWRtaW5cVmlld3NcTm90aWNlc1xEZWxldGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/HP/Desktop/P233/P233/Edu.UI/Edu.UI/Areas/EduAdmin/Views/Notices/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcRWR1QWRtaW5cVmlld3NcTm90aWNlc1xJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/HP/Desktop/P233/P233/Edu.UI/Edu.UI/Areas/EduAdmin/Views/Notices/Update.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcRWR1QWRtaW5cVmlld3NcTm90aWNlc1xVcGRhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/HP/Desktop/P233/P233/Edu.UI/Edu.UI/Areas/EduAdmin/Views/Shared/_AdminLayout.cshtml]

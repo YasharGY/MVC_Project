@@ -1,4 +1,5 @@
-﻿@{
+﻿@model IEnumerable<NoticeBoard>
+@{
 	ViewData["Title"] = "Index";
 	int count = 1;
 }
@@ -6,36 +7,34 @@
 
 <div class="card">
 	<div class="card-body">
-		<h4 class="card-title">Slider</h4>
-		<a asp-action="Create" class="btn btn-primary mb-2">Create New Slider</a>
+		<h4 class="card-title">Notice</h4>
+		<a asp-action="Create" class="btn btn-primary mb-2">Create New Notice</a>
 		<div class="table-responsive">
 			<table class="table table-dark mb-0">
 
 				<thead>
 					<tr>
 						<th>#</th>
-						<th>Image</th>
 						<th>Title</th>
-						<th>Title2</th>
+						<th>Date</th>
 						<th>Description</th>
 						<th>Settings</th>
 					</tr>
 				</thead>
 				<tbody>
-					@foreach (var slide in Model)
+					@foreach (var notice in Model)
 					{
 						<tr>
 							<th scope="row">@count</th>
-							<td><img src="@slide.ImagePath" style="width:100px" />	</td>
-							<td>@slide.Title</td>
-							<td>@slide.Title2</td>
-							<td>@slide.Description</td>
+							<td>@notice.Title</td>
+							<td>@notice.Date</td>
+							<td>@notice.Description</td>
 							<td>
 
-								<a asp-action="Update" asp-route-id="@slide.Id" class="btn btn-warning mb-2">
+								<a asp-action="Update" asp-route-id="@notice.Id" class="btn btn-warning mb-2">
 									<i class="fas fa-edit"></i>
 								</a>
-								<a asp-action="Delete" asp-route-id="@slide.Id" class="btn btn-danger mb-2">
+								<a asp-action="Delete" asp-route-id="@notice.Id" class="btn btn-danger mb-2">
 									<i class="fas fa-trash-alt"></i>
 								</a>
 

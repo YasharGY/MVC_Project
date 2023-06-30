@@ -249,3 +249,5 @@ C:\Users\HP\Desktop\P233\P233\Edu.UI\Edu.UI\bin\Debug\net6.0\Edu.Core.dll
 C:\Users\HP\Desktop\P233\P233\Edu.UI\Edu.UI\bin\Debug\net6.0\Edu.DataAccess.dll
 C:\Users\HP\Desktop\P233\P233\Edu.UI\Edu.UI\bin\Debug\net6.0\Edu.DataAccess.pdb
 C:\Users\HP\Desktop\P233\P233\Edu.UI\Edu.UI\bin\Debug\net6.0\Edu.Core.pdb
+C:\Users\HP\Desktop\P233\P233\Edu.UI\Edu.UI\bin\Debug\net6.0\AutoMapper.dll
+C:\Users\HP\Desktop\P233\P233\Edu.UI\Edu.UI\bin\Debug\net6.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll

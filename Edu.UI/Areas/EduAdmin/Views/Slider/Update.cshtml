@@ -1,11 +1,11 @@
-﻿@model SliderPostVM
+﻿@model Slider
 @{
-    ViewData["Title"] = "Create";
+    ViewData["Title"] = "Update";
 }
 
 <div class="card">
     <div class="card-body">
-        <h4 class="card-title mb-4">Horizontal Form Layout</h4>
+        <h4 class="card-title mb-4">Update</h4>
 
         <form method="post">
             <div class="row mb-4">
@@ -42,7 +42,7 @@
                 <div class="col-sm-9">
 
                     <div>
-                        <button type="submit" class="btn btn-primary w-md">Submit</button>
+                        <button type="submit" class="btn btn-primary w-md">Save</button>
                     </div>
                 </div>
             </div>
@@ -50,6 +50,7 @@
     </div>
     <!-- end card body -->
 </div>
+
 @section Script{
- <partial name="_ValidationScript"/>
+    <partial name="_ValidationScript" />
 }

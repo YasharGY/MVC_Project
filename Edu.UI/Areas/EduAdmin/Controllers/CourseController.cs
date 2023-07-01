@@ -5,6 +5,7 @@ using EduApp.Areas.EduAdmin.ViewModels.CourseViewModel;
 using EduApp.Areas.EduAdmin.ViewModels.NoticeViewModel;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using System.Configuration;
 
 namespace EduApp.Areas.EduAdmin.Controllers;
 [Area("EduAdmin")]
@@ -41,4 +42,29 @@ namespace EduApp.Areas.EduAdmin.Controllers;
 
         return RedirectToAction(nameof(Index));
     }
+	public async Task<IActionResult> Delete(int id)
+	{
+		CoursesOffer coursedb = await _context.Courses.FindAsync(id);
+		if (coursedb == null)
+		{
+			return NotFound();
+
+		}
+		return View(coursedb);
+	}
+	[HttpPost]
+	[ActionName("Delete")]
+	[AutoValidateAntiforgeryToken]
+	public async Task<IActionResult> DeletePost(int id)
+	{
+		CoursesOffer coursedb = await _context.Courses.FindAsync(id);
+		if (coursedb == null)
+		{
+			return NotFound();
+
+		}
+		_context.Courses.Remove(coursedb);
+		await _context.SaveChangesAsync();
+		return RedirectToAction(nameof(Index));
+	}
 }

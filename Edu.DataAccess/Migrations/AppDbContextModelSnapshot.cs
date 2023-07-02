@@ -47,7 +47,7 @@ namespace Edu.DataAccess.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Blogs");
+                    b.ToTable("Blogs", (string)null);
                 });
 
             modelBuilder.Entity("Edu.Core.Entities.CoursesOffer", b =>
@@ -74,7 +74,7 @@ namespace Edu.DataAccess.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Courses");
+                    b.ToTable("Courses", (string)null);
                 });
 
             modelBuilder.Entity("Edu.Core.Entities.LeftEvent", b =>
@@ -107,7 +107,7 @@ namespace Edu.DataAccess.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("LEvents");
+                    b.ToTable("LEvents", (string)null);
                 });
 
             modelBuilder.Entity("Edu.Core.Entities.NoticeBoard", b =>
@@ -133,7 +133,7 @@ namespace Edu.DataAccess.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Notices");
+                    b.ToTable("Notices", (string)null);
                 });
 
             modelBuilder.Entity("Edu.Core.Entities.RightBoard", b =>
@@ -154,7 +154,7 @@ namespace Edu.DataAccess.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Rights");
+                    b.ToTable("Rights", (string)null);
                 });
 
             modelBuilder.Entity("Edu.Core.Entities.RightEvent", b =>
@@ -187,7 +187,7 @@ namespace Edu.DataAccess.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("REvents");
+                    b.ToTable("REvents", (string)null);
                 });
 
             modelBuilder.Entity("Edu.Core.Entities.Slider", b =>
@@ -216,7 +216,7 @@ namespace Edu.DataAccess.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Sliders");
+                    b.ToTable("Sliders", (string)null);
                 });
 
             modelBuilder.Entity("Edu.Core.Entities.Testimonial", b =>
@@ -245,7 +245,7 @@ namespace Edu.DataAccess.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Testimonials");
+                    b.ToTable("Testimonials", (string)null);
                 });
 #pragma warning restore 612, 618
         }

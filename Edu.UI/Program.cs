@@ -9,6 +9,7 @@ builder.Services.AddDbContext<AppDbContext>(options =>
 	options.UseSqlServer(builder.Configuration.GetConnectionString("Default"));
 
 });
+
 var app = builder.Build();
 app.UseStaticFiles();
 app.MapControllerRoute(

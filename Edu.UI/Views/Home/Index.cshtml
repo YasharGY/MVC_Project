@@ -103,7 +103,7 @@
 			</div>
 		</div>
 		<div class="row">
-			@foreach (var courses in Model.Courses)
+			@foreach (var courses in Model.Courses.Take(3))
 			{
 				<div class="col-lg-4 col-md-6">
 					<div class="single-course">
@@ -231,7 +231,7 @@
 			</div>
 		</div>
 		<div class="row">
-			@foreach (var blogs in Model.Blogs)
+			@foreach (var blogs in Model.Blogs.Take(3))
 			{
 				<div class="col-lg-4 col-md-6">
 					<div class="single-blog">

@@ -1,18 +1,25 @@
-﻿@model CoursePostVM
+﻿@model Blog
 @{
-    ViewData["Title"] = "Create";
+    ViewData["Title"] = "Update";
 }
 
 <div class="card">
     <div class="card-body">
-        <h4 class="card-title mb-4">Courses</h4>
+        <h4 class="card-title mb-4">Update</h4>
 
         <form method="post">
             <div class="row mb-4">
-                <label asp-for="Title" class="col-sm-3 col-form-label"></label>
+                <label asp-for="Date" class="col-sm-3 col-form-label"></label>
                 <div class="col-sm-9">
-                    <input asp-for="Title" class="form-control" id="horizontal-firstname-input" placeholder="Title">
-                    <span class="text-danger" asp-validation-for="Title"></span>
+                    <input asp-for="Date" class="form-control" id="horizontal-firstname-input" placeholder="Date">
+                    <span class="text-danger" asp-validation-for="Date"></span>
+                </div>
+            </div>
+             <div class="row mb-4">
+                <label asp-for="ByWhom" class="col-sm-3 col-form-label"></label>
+                <div class="col-sm-9">
+                    <input asp-for="ByWhom" class="form-control" id="horizontal-firstname-input" placeholder="Bywhom">
+                    <span class="text-danger" asp-validation-for="ByWhom"></span>
                 </div>
             </div>
             <div class="row mb-4">
@@ -35,7 +42,7 @@
                 <div class="col-sm-9">
 
                     <div>
-                        <button type="submit" class="btn btn-primary w-md">Submit</button>
+                        <button type="submit" class="btn btn-primary w-md">Save</button>
                     </div>
                 </div>
             </div>
@@ -43,6 +50,7 @@
     </div>
     <!-- end card body -->
 </div>
+
 @section Script{
     <partial name="_ValidationScript" />
 }

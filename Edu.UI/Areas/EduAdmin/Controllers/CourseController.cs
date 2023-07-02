@@ -67,4 +67,36 @@ namespace EduApp.Areas.EduAdmin.Controllers;
 		await _context.SaveChangesAsync();
 		return RedirectToAction(nameof(Index));
 	}
+    public async Task<IActionResult> Update(int id)
+    {
+        CoursesOffer coursedb = await _context.Courses.FindAsync(id);
+        if (coursedb == null)
+        {
+            return NotFound();
+
+        }
+        return View(coursedb);
+    }
+    [HttpPost]
+    [ValidateAntiForgeryToken]
+    public async Task<IActionResult> Update(int id, CoursesOffer course)
+    {
+        if (id != course.Id)
+        {
+            return BadRequest();
+        }
+        if (!ModelState.IsValid)
+        {
+            return View(course);
+        }
+        CoursesOffer coursedb = await _context.Courses.AsNoTracking().FirstOrDefaultAsync(s => s.Id == course.Id);
+        if (coursedb == null)
+        {
+            return NotFound();
+        }
+        _context.Entry(course).State = EntityState.Modified;
+        await _context.SaveChangesAsync();
+        return RedirectToAction(nameof(Index));
+    }
+
 }

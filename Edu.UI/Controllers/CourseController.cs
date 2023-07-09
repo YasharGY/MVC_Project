@@ -16,11 +16,11 @@ public class CourseController : Controller
 
 	public async Task<IActionResult> Index()
 	{
-		HomeVM model = new HomeVM()
+		HomeVM model = new HomeVM
 		{
 			Courses = await _context.Courses.ToListAsync(),
-			
-		};
+            Categories = await _context.Categories.ToListAsync(),
+        };
 		return View(model);
 	}
 }

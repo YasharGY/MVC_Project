@@ -34,7 +34,7 @@
                             <div class="single-blog mb-60">
                                 <div class="single-course">
                                     <div class="course-img">
-                                        <a asp-controller="CourseDetails" asp-action="Index" asp-route-id="@course.Id">
+                                        <a asp-controller="CourseDetaile" asp-action="Index" asp-route-id="@course.Id">
                                             <img style="height:240px;" src="@course.ImagePath" alt="course">
                                             <div class="course-hover">
                                                 <i class="fa fa-link"></i>
@@ -42,9 +42,9 @@
                                         </a>
                                     </div>
                                     <div class="course-content">
-                                        <h3><a asp-controller="CourseDetails" asp-action="Index" asp-route-id="@course.Id">@course.Title</a></h3>
+                                        <h3><a asp-controller="CourseDetaile" asp-action="Index" asp-route-id="@course.Id">@course.Title</a></h3>
                                         <p>@(course.Description.Length > 120 ? course.Description.Substring(0, 120) : course.Description)</p>
-                                        <a asp-controller="CourseDetails" asp-action="Index" asp-route-id="@course.Id" class="default-btn">read more</a>
+                                        <a asp-controller="CourseDetaile" asp-action="Index" asp-route-id="@course.Id" class="default-btn">read more</a>
                                     </div>
                                 </div>
                             </div>
@@ -68,10 +68,10 @@
                     <div class="single-blog-widget mb-50">
                         <h3>categories</h3>
                         <ul>
-                         @*   @foreach (var category in Model.categories)
+                            @foreach (var category in Model.Categories)
                             {
-                                <li><a href="#">@category.Categorie</a></li>
-                            }*@
+                                <li><a href="#">@category.Categories</a></li>
+                            }
                         </ul>
                     </div>
                     <div class="single-blog-widget mb-50">
@@ -148,9 +148,4 @@
     </div>
 </div>
 <!-- Subscribe End -->
-@{
-    ViewData["Title"] = "Index";
-}
-
-<h1>Index</h1>
 

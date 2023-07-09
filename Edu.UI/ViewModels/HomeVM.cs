@@ -12,5 +12,11 @@ public class HomeVM
 	public IEnumerable<RightEvent> RightEvents { get; set; }
 	public IEnumerable<Testimonial> Testimonials { get; set; }
 	public IEnumerable<Blog> Blogs { get; set; }
+	public IEnumerable<Categorie> Categories { get; set; }
+	public IEnumerable<CourseDetaile> CourseDetailes { get; set; }
+	public IEnumerable<EventDetaile> EventDetailes { get; set; }
+	public IEnumerable<Speaker> Speakers { get; set; }
+	public IEnumerable<EventSpeaker> EventSpeakers { get; set; }
+
 
 }

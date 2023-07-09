@@ -17,4 +17,10 @@ public class AppDbContext:DbContext
 	public DbSet<RightEvent> REvents { get; set; }
 	public DbSet<Testimonial> Testimonials { get; set; }
 	public DbSet<Blog> Blogs { get; set; }
+	public DbSet<CourseDetaile> CourseDetailes { get; set; }
+	public DbSet<Categorie> Categories { get; set; }
+	public DbSet<EventDetaile> EventDetailes { get; set; }
+	public DbSet<Speaker> Speakers { get; set; }
+	public DbSet<EventSpeaker> EventSpeakers { get; set; }
+
 }

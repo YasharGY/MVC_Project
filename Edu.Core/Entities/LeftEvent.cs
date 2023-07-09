@@ -12,4 +12,7 @@ public class LeftEvent : IEntity
 	public string Title { get; set; }
 	public string Datetime { get; set; }
 	public string Location { get; set; }
+
+    public EventDetaile Details { get; set; }
+    public List<EventSpeaker> EventSpeakers { get; set; }
 }

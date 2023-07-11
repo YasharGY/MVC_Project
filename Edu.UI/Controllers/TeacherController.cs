@@ -6,12 +6,10 @@ using Microsoft.EntityFrameworkCore;
 
 namespace EduApp.Controllers;
 
-public class TeacherController : Controller
-{
-	public class TeachersController : Controller
+	public class TeacherController : Controller
 	{
 		private readonly AppDbContext _context;
-		public TeachersController(AppDbContext context)
+		public TeacherController(AppDbContext context)
 		{
 			_context = context;
 		}
@@ -25,4 +23,4 @@ public class TeacherController : Controller
 			return View(model);
 		}
 	}
-}
+

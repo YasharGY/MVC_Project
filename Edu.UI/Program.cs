@@ -28,6 +28,8 @@ builder.Services.AddIdentity<AppUser, IdentityRole>(IdentityOptions =>
 
 
 var app = builder.Build();
+app.UseAuthentication();
+app.UseAuthorization();
 app.UseStaticFiles();
 app.MapControllerRoute(
 name: "areas",

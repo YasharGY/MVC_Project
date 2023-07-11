@@ -42,7 +42,8 @@ public class EventDetaileController : Controller
 
             EventDetailes = eventsDetails,
             LeftEvents = events,
+			Blogs = await _context.Blogs.ToListAsync(),
 
-        });
+		});
     }
 }

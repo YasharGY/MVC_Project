@@ -17,6 +17,8 @@ public class HomeVM
 	public IEnumerable<EventDetaile> EventDetailes { get; set; }
 	public IEnumerable<Speaker> Speakers { get; set; }
 	public IEnumerable<EventSpeaker> EventSpeakers { get; set; }
+	public IEnumerable<Teacher> Teachers { get; set; }
+	public IEnumerable<TeacherDetaile> TeacherDetailes { get; set; }
 
 
 }

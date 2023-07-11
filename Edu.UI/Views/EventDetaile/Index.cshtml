@@ -191,7 +191,7 @@
                                             <li><span>venue : </span>@item.Events.Location</li>
                                         </ul>
                                         <p>@item.Events.Details.Description</p>
-                                        <div class="speakers-area fix">
+                                      @*  <div class="speakers-area fix">
                                             <h4>speakers</h4>
                                             @foreach (var speakers in Model.LeftEvents.Where(e => e.Id == item.Events.Id).SelectMany(e => e.EventSpeakers.Select(es => es.Speakers)))
                                             {
@@ -205,7 +205,7 @@
                                                     </div>
                                                 </div>
                                             }
-                                        </div>
+                                        </div>*@
                                     </div>
                                     <div class="reply-area">
                                         <h3>LEAVE A REPLY</h3>
@@ -278,7 +278,7 @@
                                                 </div>
                                                 <div class="single-post-content">
                                                     <h4><a href="blog-details.html">English Language Course for you</a></h4>
-                                                    <p>@blog.ByWhom  /  @blog.Date.ToString("dd MMM yyyy")</p>
+                                                    <p>@blog.ByWhom  /  @blog.Date</p>
                                                 </div>
                                             </div>
                                         }

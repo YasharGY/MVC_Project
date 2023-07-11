@@ -1,10 +1,12 @@
 ﻿using Edu.Core.Entities;
 using EduApp.Areas.EduAdmin.ViewModels.RegisterViewModel;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 
 namespace EduApp.Areas.EduAdmin.Controllers;
 [Area("EduAdmin")]
+[Authorize]
 public class AuthController : Controller
 {
     private readonly UserManager<AppUser> _userManager;
@@ -15,7 +17,7 @@ public class AuthController : Controller
         _userManager = userManager;
         _signInManager = signInManager;
     }
-
+    [AllowAnonymous]
     public IActionResult Register()
     {
         return View();
@@ -62,7 +64,7 @@ public class AuthController : Controller
         }
         Microsoft.AspNetCore.Identity.SignInResult signInResult =
         await _signInManager.PasswordSignInAsync(user, login.Password, login.RememberMe, true);
-        if (!signInResult.IsLockedOut)
+        if (signInResult.IsLockedOut)
         {
             ModelState.AddModelError("", " Your account is locked. Try after!");
             return View(login);
@@ -75,12 +77,16 @@ public class AuthController : Controller
             return View(login);
         }
         
-        return RedirectToAction("Index","Home");
+        return RedirectToAction("Index","Home", new { area = string.Empty });
     }
 
     public async Task<IActionResult> Logout()
     {
-        await _signInManager.SignOutAsync();
-        return RedirectToAction("Index","Home");
+        if (User.Identity.IsAuthenticated)
+        {
+			await _signInManager.SignOutAsync();
+		}
+       
+        return RedirectToAction("Index","Home", new {area = string.Empty});
     }
 }

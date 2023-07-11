@@ -90,12 +90,23 @@
 											</ul>
 										</li>
 										<li>
-											<a href="~/assets/blog.html">My Accaount</a>
-											<ul>
-												<li><a href="~/assets/blog.html">LoOut</a></li>
-												<li><a asp-area="EduAdmin" asp-action="LogOut">Login</a></li>
-												<li><a href="~/assets/blog-right-side-bar.html">blog righ sidebar</a></li>
-											</ul>
+											@if (User.Identity.IsAuthenticated)
+											{
+												<a href="~/assets/blog.html">@User.Identity.Name</a>
+										<ul>
+												<li><a asp-area="EduAdmin" asp-controller="Auth" asp-action="Logout">Logout</a></li>
+										</ul>
+											}
+											else
+											{
+											
+										<ul>
+
+												<li><a asp-area="EduAdmin" asp-controller="Auth" asp-action="Login">LogIn</a></li>
+
+										</ul>
+											}
+											
 										</li>
 											<li><a href="~/assets/contact.html">Contact</a></li>
 										<li><a href="~/assets/contact.html">Buy Now</a>

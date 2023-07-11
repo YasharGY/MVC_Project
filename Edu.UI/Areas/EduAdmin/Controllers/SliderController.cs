@@ -2,12 +2,13 @@
 using Edu.Core.Entities;
 using Edu.DataAccess.Contexts;
 using EduApp.Areas.EduAdmin.ViewModels.SliderViewModel;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
 namespace EduApp.Areas.EduAdmin.Controllers;
 [Area("EduAdmin")]
-
+[Authorize]
 public class SliderController : Controller
 {
 	private readonly AppDbContext _context;

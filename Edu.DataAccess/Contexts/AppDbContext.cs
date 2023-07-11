@@ -23,5 +23,7 @@ public class AppDbContext:IdentityDbContext<AppUser>
 	public DbSet<EventDetaile> EventDetailes { get; set; }
 	public DbSet<Speaker> Speakers { get; set; }
 	public DbSet<EventSpeaker> EventSpeakers { get; set; }
+	public DbSet<Teacher> teachers { get; set; }
+	public DbSet<TeacherDetaile> teacherDetailes { get; set; }
 
 }

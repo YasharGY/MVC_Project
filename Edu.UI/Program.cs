@@ -25,7 +25,10 @@ builder.Services.AddIdentity<AppUser, IdentityRole>(IdentityOptions =>
 	IdentityOptions.Lockout.AllowedForNewUsers = true;
 }).AddEntityFrameworkStores<AppDbContext>()
 	.AddDefaultTokenProviders();
-
+builder.Services.ConfigureApplicationCookie(options =>
+{
+	options.LoginPath = "/EduAdmin/Auth/Login";
+});
 
 var app = builder.Build();
 app.UseAuthentication();

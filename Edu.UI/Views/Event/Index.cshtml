@@ -29,8 +29,8 @@
                 <div class="col-lg-4 col-md-6">
                     <div class="single-event mb-60">
                         <div  class="event-img">
-                            <a href="event-details.html">
-                                <img  style="height:200px;object-fit:cover" src="@events.Details.ImagePath"  alt="event">
+                            <a asp-controller="EventDetaile" asp-action="Index" asp-route-id="@events.Id">
+                                <img   style="height:200px;object-fit:cover" src="@events.Details.ImagePath"  alt="event">
                                 <div class="course-hover">
                                     <i class="fa fa-link"></i>
                                 </div>

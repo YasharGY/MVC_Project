@@ -1,5 +1,7 @@
 using Edu.Core.Entities;
 using Edu.DataAccess.Contexts;
+using EduApp.Areas.EduAdmin.Data.Service;
+using EduApp.Helpers;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 
@@ -11,6 +13,10 @@ builder.Services.AddDbContext<AppDbContext>(options =>
 	options.UseSqlServer(builder.Configuration.GetConnectionString("Default"));
 
 });
+builder.Services.Configure<EmailSetting>(builder.Configuration.GetSection("EmailSetting"));
+builder.Services.AddScoped<IEmailService, EmailService>();
+builder.Services.AddScoped<EmailSetting>();
+
 builder.Services.AddIdentity<AppUser, IdentityRole>(IdentityOptions =>
 {
 	IdentityOptions.User.RequireUniqueEmail = true;

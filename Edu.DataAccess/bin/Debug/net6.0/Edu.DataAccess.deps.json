@@ -9,11 +9,28 @@
       "Edu.DataAccess/1.0.0": {
         "dependencies": {
           "Edu.Core": "1.0.0",
+          "MailKit.NET": "2.0.0",
           "Microsoft.EntityFrameworkCore": "6.0.19",
           "Microsoft.EntityFrameworkCore.SqlServer": "6.0.19"
         },
         "runtime": {
           "Edu.DataAccess.dll": {}
+        }
+      },
+      "MailKit.NET/2.0.0": {
+        "dependencies": {
+          "Microsoft.Win32.Registry": "4.7.0",
+          "NETStandard.Library": "2.0.0",
+          "Newtonsoft.Json": "12.0.2",
+          "System.Management": "4.5.0",
+          "System.Security.Cryptography.Pkcs": "4.5.0",
+          "System.Text.Encoding.CodePages": "4.7.0"
+        },
+        "runtime": {
+          "lib/netstandard2.0/MailKit.NET.dll": {
+            "assemblyVersion": "2.0.0.0",
+            "fileVersion": "2.0.0.1"
+          }
         }
       },
       "Microsoft.AspNetCore.Cryptography.Internal/6.0.19": {
@@ -375,6 +392,27 @@
           }
         }
       },
+      "NETStandard.Library/2.0.0": {
+        "dependencies": {
+          "Microsoft.NETCore.Platforms": "3.1.0"
+        }
+      },
+      "Newtonsoft.Json/12.0.2": {
+        "runtime": {
+          "lib/netstandard2.0/Newtonsoft.Json.dll": {
+            "assemblyVersion": "12.0.0.0",
+            "fileVersion": "12.0.2.23222"
+          }
+        }
+      },
+      "System.CodeDom/4.5.0": {
+        "runtime": {
+          "lib/netstandard2.0/System.CodeDom.dll": {
+            "assemblyVersion": "4.0.1.0",
+            "fileVersion": "4.6.26515.6"
+          }
+        }
+      },
       "System.Collections.Immutable/6.0.0": {
         "dependencies": {
           "System.Runtime.CompilerServices.Unsafe": "6.0.0"
@@ -441,6 +479,27 @@
           }
         }
       },
+      "System.Management/4.5.0": {
+        "dependencies": {
+          "Microsoft.NETCore.Platforms": "3.1.0",
+          "Microsoft.Win32.Registry": "4.7.0",
+          "System.CodeDom": "4.5.0"
+        },
+        "runtime": {
+          "lib/netstandard2.0/System.Management.dll": {
+            "assemblyVersion": "4.0.0.0",
+            "fileVersion": "4.6.26515.6"
+          }
+        },
+        "runtimeTargets": {
+          "runtimes/win/lib/netcoreapp2.0/System.Management.dll": {
+            "rid": "win",
+            "assetType": "runtime",
+            "assemblyVersion": "4.0.0.0",
+            "fileVersion": "4.6.26515.6"
+          }
+        }
+      },
       "System.Runtime.Caching/4.7.0": {
         "dependencies": {
           "System.Configuration.ConfigurationManager": "4.7.0"
@@ -468,6 +527,25 @@
         }
       },
       "System.Security.Cryptography.Cng/4.5.0": {},
+      "System.Security.Cryptography.Pkcs/4.5.0": {
+        "dependencies": {
+          "System.Security.Cryptography.Cng": "4.5.0"
+        },
+        "runtime": {
+          "lib/netcoreapp2.1/System.Security.Cryptography.Pkcs.dll": {
+            "assemblyVersion": "4.0.3.0",
+            "fileVersion": "4.6.26515.6"
+          }
+        },
+        "runtimeTargets": {
+          "runtimes/win/lib/netcoreapp2.1/System.Security.Cryptography.Pkcs.dll": {
+            "rid": "win",
+            "assetType": "runtime",
+            "assemblyVersion": "4.0.3.0",
+            "fileVersion": "4.6.26515.6"
+          }
+        }
+      },
       "System.Security.Cryptography.ProtectedData/4.7.0": {
         "runtime": {
           "lib/netstandard2.0/System.Security.Cryptography.ProtectedData.dll": {
@@ -523,6 +601,7 @@
       },
       "Edu.Core/1.0.0": {
         "dependencies": {
+          "MailKit.NET": "2.0.0",
           "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "6.0.19"
         },
         "runtime": {
@@ -536,6 +615,13 @@
       "type": "project",
       "serviceable": false,
       "sha512": ""
+    },
+    "MailKit.NET/2.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-13IPD5Mf6FhfXlNG3PPtnkAtT1c8ig4Ww5ZIYmUIWCw8w0ndAxM5eC4gEIebVWEmeIICinozPpE3Fkx/dI9F4w==",
+      "path": "mailkit.net/2.0.0",
+      "hashPath": "mailkit.net.2.0.0.nupkg.sha512"
     },
     "Microsoft.AspNetCore.Cryptography.Internal/6.0.19": {
       "type": "package",
@@ -754,6 +840,27 @@
       "path": "microsoft.win32.systemevents/4.7.0",
       "hashPath": "microsoft.win32.systemevents.4.7.0.nupkg.sha512"
     },
+    "NETStandard.Library/2.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-7jnbRU+L08FXKMxqUflxEXtVymWvNOrS8yHgu9s6EM8Anr6T/wIX4nZ08j/u3Asz+tCufp3YVwFSEvFTPYmBPA==",
+      "path": "netstandard.library/2.0.0",
+      "hashPath": "netstandard.library.2.0.0.nupkg.sha512"
+    },
+    "Newtonsoft.Json/12.0.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-rTK0s2EKlfHsQsH6Yx2smvcTCeyoDNgCW7FEYyV01drPlh2T243PR2DiDXqtC5N4GDm4Ma/lkxfW5a/4793vbA==",
+      "path": "newtonsoft.json/12.0.2",
+      "hashPath": "newtonsoft.json.12.0.2.nupkg.sha512"
+    },
+    "System.CodeDom/4.5.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-gqpR1EeXOuzNQWL7rOzmtdIz3CaXVjSQCiaGOs2ivjPwynKSJYm39X81fdlp7WuojZs/Z5t1k5ni7HtKQurhjw==",
+      "path": "system.codedom/4.5.0",
+      "hashPath": "system.codedom.4.5.0.nupkg.sha512"
+    },
     "System.Collections.Immutable/6.0.0": {
       "type": "package",
       "serviceable": true,
@@ -789,6 +896,13 @@
       "path": "system.identitymodel.tokens.jwt/6.8.0",
       "hashPath": "system.identitymodel.tokens.jwt.6.8.0.nupkg.sha512"
     },
+    "System.Management/4.5.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-Z6ac0qPGr3yJtwZEX1SRkhwWa0Kf5NJxx7smLboYsGrApQFECNFdqhGy252T4lrZ5Nwzhd9VQiaifndR3bfHdg==",
+      "path": "system.management/4.5.0",
+      "hashPath": "system.management.4.5.0.nupkg.sha512"
+    },
     "System.Runtime.Caching/4.7.0": {
       "type": "package",
       "serviceable": true,
@@ -816,6 +930,13 @@
       "sha512": "sha512-WG3r7EyjUe9CMPFSs6bty5doUqT+q9pbI80hlNzo2SkPkZ4VTuZkGWjpp77JB8+uaL4DFPRdBsAY+DX3dBK92A==",
       "path": "system.security.cryptography.cng/4.5.0",
       "hashPath": "system.security.cryptography.cng.4.5.0.nupkg.sha512"
+    },
+    "System.Security.Cryptography.Pkcs/4.5.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-TGQX51gxpY3K3I6LJlE2LAftVlIMqJf0cBGhz68Y89jjk3LJCB6SrwiD+YN1fkqemBvWGs+GjyMJukl6d6goyQ==",
+      "path": "system.security.cryptography.pkcs/4.5.0",
+      "hashPath": "system.security.cryptography.pkcs.4.5.0.nupkg.sha512"
     },
     "System.Security.Cryptography.ProtectedData/4.7.0": {
       "type": "package",

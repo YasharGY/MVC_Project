@@ -8,19 +8,18 @@
 
   <ItemGroup>
     <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="12.0.1" />
+    <PackageReference Include="MailKit" Version="4.1.0" />
+    <PackageReference Include="MailKit.NET" Version="2.0.0" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="6.0.19">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="6.0.14" />
+    <PackageReference Include="MimeKit" Version="4.1.0" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\Edu.DataAccess\Edu.DataAccess.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Areas\EduAdmin\Data\" />
   </ItemGroup>
 
 </Project>

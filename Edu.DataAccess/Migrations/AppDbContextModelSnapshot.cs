@@ -115,7 +115,7 @@ namespace Edu.DataAccess.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Blogs");
+                    b.ToTable("Blogs", (string)null);
                 });
 
             modelBuilder.Entity("Edu.Core.Entities.Categorie", b =>
@@ -132,7 +132,7 @@ namespace Edu.DataAccess.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Categories");
+                    b.ToTable("Categories", (string)null);
                 });
 
             modelBuilder.Entity("Edu.Core.Entities.CourseDetaile", b =>
@@ -210,7 +210,7 @@ namespace Edu.DataAccess.Migrations
                     b.HasIndex("CoursesOfferId")
                         .IsUnique();
 
-                    b.ToTable("CourseDetailes");
+                    b.ToTable("CourseDetailes", (string)null);
                 });
 
             modelBuilder.Entity("Edu.Core.Entities.CoursesOffer", b =>
@@ -245,7 +245,7 @@ namespace Edu.DataAccess.Migrations
 
                     b.HasIndex("CategorieId");
 
-                    b.ToTable("Courses");
+                    b.ToTable("Courses", (string)null);
                 });
 
             modelBuilder.Entity("Edu.Core.Entities.EventDetaile", b =>
@@ -277,7 +277,7 @@ namespace Edu.DataAccess.Migrations
                     b.HasIndex("LeftEventsId")
                         .IsUnique();
 
-                    b.ToTable("EventDetailes");
+                    b.ToTable("EventDetailes", (string)null);
                 });
 
             modelBuilder.Entity("Edu.Core.Entities.EventSpeaker", b =>
@@ -300,7 +300,7 @@ namespace Edu.DataAccess.Migrations
 
                     b.HasIndex("SpeakersId");
 
-                    b.ToTable("EventSpeakers");
+                    b.ToTable("EventSpeakers", (string)null);
                 });
 
             modelBuilder.Entity("Edu.Core.Entities.LeftEvent", b =>
@@ -333,7 +333,7 @@ namespace Edu.DataAccess.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("LEvents");
+                    b.ToTable("LEvents", (string)null);
                 });
 
             modelBuilder.Entity("Edu.Core.Entities.NoticeBoard", b =>
@@ -359,7 +359,7 @@ namespace Edu.DataAccess.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Notices");
+                    b.ToTable("Notices", (string)null);
                 });
 
             modelBuilder.Entity("Edu.Core.Entities.RightBoard", b =>
@@ -380,7 +380,7 @@ namespace Edu.DataAccess.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Rights");
+                    b.ToTable("Rights", (string)null);
                 });
 
             modelBuilder.Entity("Edu.Core.Entities.RightEvent", b =>
@@ -413,7 +413,7 @@ namespace Edu.DataAccess.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("REvents");
+                    b.ToTable("REvents", (string)null);
                 });
 
             modelBuilder.Entity("Edu.Core.Entities.Slider", b =>
@@ -442,7 +442,7 @@ namespace Edu.DataAccess.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Sliders");
+                    b.ToTable("Sliders", (string)null);
                 });
 
             modelBuilder.Entity("Edu.Core.Entities.Speaker", b =>
@@ -471,7 +471,7 @@ namespace Edu.DataAccess.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Speakers");
+                    b.ToTable("Speakers", (string)null);
                 });
 
             modelBuilder.Entity("Edu.Core.Entities.Teacher", b =>
@@ -498,7 +498,7 @@ namespace Edu.DataAccess.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("teachers");
+                    b.ToTable("teachers", (string)null);
                 });
 
             modelBuilder.Entity("Edu.Core.Entities.TeacherDetaile", b =>
@@ -572,7 +572,7 @@ namespace Edu.DataAccess.Migrations
                     b.HasIndex("TeacherId")
                         .IsUnique();
 
-                    b.ToTable("teacherDetailes");
+                    b.ToTable("teacherDetailes", (string)null);
                 });
 
             modelBuilder.Entity("Edu.Core.Entities.Testimonial", b =>
@@ -601,7 +601,7 @@ namespace Edu.DataAccess.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Testimonials");
+                    b.ToTable("Testimonials", (string)null);
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRole", b =>

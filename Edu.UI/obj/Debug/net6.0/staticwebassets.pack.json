@@ -1,6 +1,10 @@
 {
   "Files": [
     {
+      "Id": "C:\\Users\\HP\\Desktop\\P233\\P233\\Edu.UI\\Edu.UI\\wwwroot\\Tamplate\\htmlpage.html",
+      "PackagePath": "staticwebassets\\Tamplate\\htmlpage.html"
+    },
+    {
       "Id": "C:\\Users\\HP\\Desktop\\P233\\P233\\Edu.UI\\Edu.UI\\wwwroot\\admin\\css\\app.min.css",
       "PackagePath": "staticwebassets\\admin\\css\\app.min.css"
     },

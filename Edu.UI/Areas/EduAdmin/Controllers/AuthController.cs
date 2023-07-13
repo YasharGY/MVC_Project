@@ -1,10 +1,12 @@
 ﻿using Edu.Core.Entities;
+using Edu.Core.Utilities;
 using EduApp.Areas.EduAdmin.Data.Service;
 using EduApp.Areas.EduAdmin.ViewModels.RegisterViewModel;
 using EduApp.ViewModels;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using System.Runtime.InteropServices;
 
 namespace EduApp.Areas.EduAdmin.Controllers;
 [Area("EduAdmin")]
@@ -13,16 +15,18 @@ public class AuthController : Controller
 {
     private readonly UserManager<AppUser> _userManager;
     private readonly SignInManager<AppUser> _signInManager;
+    private readonly RoleManager<IdentityRole> _roleManager;
     private readonly IWebHostEnvironment _env;
     private readonly IEmailService _emailService;
-    public AuthController(UserManager<AppUser> userManager, SignInManager<AppUser> signInManager, IEmailService emailService, IWebHostEnvironment env)
+    public AuthController(UserManager<AppUser> userManager, SignInManager<AppUser> signInManager, IEmailService emailService, IWebHostEnvironment env, RoleManager<IdentityRole> roleManager)
     {
         _userManager = userManager;
         _signInManager = signInManager;
         _emailService = emailService;
         _env = env;
+        _roleManager = roleManager;
     }
-    
+
     public IActionResult Register()
     {
         return View();
@@ -49,6 +53,7 @@ public class AuthController : Controller
             }
             return View(newuser);
         }
+        await _userManager.AddToRoleAsync(user, UserRole.Member);
         return RedirectToAction("Login");
     }
     
@@ -94,6 +99,29 @@ public class AuthController : Controller
        
         return RedirectToAction("Index","Home", new {area = string.Empty});
     }
+
+    ////CreateRole
+    //[AllowAnonymous]
+    //public async Task CreateRole()
+    //{
+    //    foreach (var role in Enum.GetValues(typeof(UserRole.Roles)))
+    //    {
+    //        bool isExist = await _roleManager.RoleExistsAsync(role.ToString());
+    //        if (!isExist)
+    //        {
+    //            await _roleManager.CreateAsync(new IdentityRole { Name = role.ToString() });
+    //        }
+    //    }
+     
+       
+    //}
+
+
+
+
+
+
+
 
 
 
@@ -145,7 +173,7 @@ public class AuthController : Controller
         string subject = "Verfiy password reset email";
 
         string html = string.Empty;
-        using (StreamReader reader = new StreamReader("wwwroot/templates/htmlpage.html"))
+        using (StreamReader reader = new StreamReader("wwwroot/Tamplate/htmlpage.html"))
         {
             html = reader.ReadToEnd();
         }

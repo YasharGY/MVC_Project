@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "rW4gs/nIIo960/Yv2rPt7E27ixbJ2dylq/jMNouZEk4=",
+  "Hash": "hPZe0BD5QtaFx6yDnN9XFt6oYDS0ZG1UqAZSH0EdGlM=",
   "Source": "EduApp",
   "BasePath": "_content/EduApp",
   "Mode": "Default",
@@ -6968,6 +6968,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\assets\\js\\vendor\\modernizr-3.11.2.min.js"
+    },
+    {
+      "Identity": "C:\\Users\\HP\\Desktop\\P233\\P233\\Edu.UI\\Edu.UI\\wwwroot\\Tamplate\\htmlpage.html",
+      "SourceId": "EduApp",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\HP\\Desktop\\P233\\P233\\Edu.UI\\Edu.UI\\wwwroot\\",
+      "BasePath": "_content/EduApp",
+      "RelativePath": "Tamplate/htmlpage.html",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Tamplate\\htmlpage.html"
     }
   ]
 }

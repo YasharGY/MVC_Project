@@ -17,11 +17,6 @@ namespace EduApp.Controllers
 
 		public async Task<IActionResult> Index()
         {
-            var clientId = "106159346041-jbfh25he9m5oafh0hrle91b091lecc2u.apps.googleusercontent.com";
-            var url = "https://localhost:7118/Auth/GoogleLoginCallBack";
-            var response = GoogleAuth.GetAuthUrl(clientId, url);
-            ViewBag.response = response;
-
 
             HomeVM homeVM = new()
             {
@@ -34,7 +29,14 @@ namespace EduApp.Controllers
                 Testimonials = await _context.Testimonials.ToListAsync(),
                 Blogs = await _context.Blogs.ToListAsync(),
             };
-            return View(homeVM);
+
+
+			var clientId = "106159346041-jbfh25he9m5oafh0hrle91b091lecc2u.apps.googleusercontent.com";
+			var url = "https://localhost:7118/Auth/GoogleLoginCallBack"; 
+			var response = GoogleAuth.GetAuthUrl(clientId, url);
+			ViewBag.response = response;
+
+			return View(homeVM);
         }
     }
 }

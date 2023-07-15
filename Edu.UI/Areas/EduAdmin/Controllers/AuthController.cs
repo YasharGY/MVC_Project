@@ -8,6 +8,8 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using System.Runtime.InteropServices;
 using GoogleAuthentication.Services;
+using Newtonsoft.Json;
+using EduApp.Helpers;
 
 namespace EduApp.Areas.EduAdmin.Controllers;
 [Area("EduAdmin")]
@@ -96,8 +98,9 @@ public class AuthController : Controller
         var clientId = "106159346041-jbfh25he9m5oafh0hrle91b091lecc2u.apps.googleusercontent.com";
         var url = "https://localhost:7118/Auth/GoogleLoginCallBack";
         var clientSecret = "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";
-        var token = await GoogleAuth.GetAuthAccessToken(code, clientId, clientSecret, url);
+		var token = await GoogleAuth.GetAuthAccessToken(code, clientId, clientSecret, url);
         var userProfile = await GoogleAuth.GetProfileResponseAsync(token.AccessToken.ToString());
+        var googleUser = JsonConvert.DeserializeObject<GoogleProfile>(userProfile);   
         return RedirectToAction("Index", "Home", new { area = string.Empty });
 	}
 

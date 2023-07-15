@@ -2,6 +2,18 @@
   "version": 3,
   "targets": {
     "net6.0": {
+      "GoogleAuthentication/1.0.0": {
+        "type": "package",
+        "dependencies": {
+          "Newtonsoft.Json": "13.0.1"
+        },
+        "compile": {
+          "lib/net46/GoogleAuthentication.dll": {}
+        },
+        "runtime": {
+          "lib/net46/GoogleAuthentication.dll": {}
+        }
+      },
       "MailKit.NET/2.0.0": {
         "type": "package",
         "dependencies": {
@@ -378,7 +390,7 @@
           "build/netstandard2.0/NETStandard.Library.targets": {}
         }
       },
-      "Newtonsoft.Json/12.0.2": {
+      "Newtonsoft.Json/13.0.1": {
         "type": "package",
         "compile": {
           "lib/netstandard2.0/Newtonsoft.Json.dll": {
@@ -580,6 +592,19 @@
     }
   },
   "libraries": {
+    "GoogleAuthentication/1.0.0": {
+      "sha512": "o8etqL7SsgtLQpptUH1A6sHgufH3/LlSwZV0snQwPxelMqjH9fBXVe7AocWYU+Afjvf42CX0HWwQxrHoA2DL1Q==",
+      "type": "package",
+      "path": "googleauthentication/1.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "content/Code2Night.jpeg",
+        "googleauthentication.1.0.0.nupkg.sha512",
+        "googleauthentication.nuspec",
+        "lib/net46/GoogleAuthentication.dll"
+      ]
+    },
     "MailKit.NET/2.0.0": {
       "sha512": "13IPD5Mf6FhfXlNG3PPtnkAtT1c8ig4Ww5ZIYmUIWCw8w0ndAxM5eC4gEIebVWEmeIICinozPpE3Fkx/dI9F4w==",
       "type": "package",
@@ -1156,10 +1181,10 @@
         "netstandard.library.nuspec"
       ]
     },
-    "Newtonsoft.Json/12.0.2": {
-      "sha512": "rTK0s2EKlfHsQsH6Yx2smvcTCeyoDNgCW7FEYyV01drPlh2T243PR2DiDXqtC5N4GDm4Ma/lkxfW5a/4793vbA==",
+    "Newtonsoft.Json/13.0.1": {
+      "sha512": "ppPFpBcvxdsfUonNcvITKqLl3bqxWbDCZIzDWHzjpdAHRFfZe0Dw9HmA0+za13IdyrgJwpkDTDA9fHaxOrt20A==",
       "type": "package",
-      "path": "newtonsoft.json/12.0.2",
+      "path": "newtonsoft.json/13.0.1",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -1178,12 +1203,9 @@
         "lib/netstandard1.3/Newtonsoft.Json.xml",
         "lib/netstandard2.0/Newtonsoft.Json.dll",
         "lib/netstandard2.0/Newtonsoft.Json.xml",
-        "lib/portable-net40+sl5+win8+wp8+wpa81/Newtonsoft.Json.dll",
-        "lib/portable-net40+sl5+win8+wp8+wpa81/Newtonsoft.Json.xml",
-        "lib/portable-net45+win8+wp8+wpa81/Newtonsoft.Json.dll",
-        "lib/portable-net45+win8+wp8+wpa81/Newtonsoft.Json.xml",
-        "newtonsoft.json.12.0.2.nupkg.sha512",
-        "newtonsoft.json.nuspec"
+        "newtonsoft.json.13.0.1.nupkg.sha512",
+        "newtonsoft.json.nuspec",
+        "packageIcon.png"
       ]
     },
     "System.CodeDom/4.5.0": {
@@ -1520,6 +1542,7 @@
   },
   "projectFileDependencyGroups": {
     "net6.0": [
+      "GoogleAuthentication >= 1.0.0",
       "MailKit.NET >= 2.0.0",
       "Microsoft.AspNetCore.Identity.EntityFrameworkCore >= 6.0.19"
     ]
@@ -1568,6 +1591,10 @@
       "net6.0": {
         "targetAlias": "net6.0",
         "dependencies": {
+          "GoogleAuthentication": {
+            "target": "Package",
+            "version": "[1.0.0, )"
+          },
           "MailKit.NET": {
             "target": "Package",
             "version": "[2.0.0, )"
@@ -1596,5 +1623,17 @@
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.103\\RuntimeIdentifierGraph.json"
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'GoogleAuthentication 1.0.0' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net6.0'. This package may not be fully compatible with your project.",
+      "libraryId": "GoogleAuthentication",
+      "targetGraphs": [
+        "net6.0"
+      ]
+    }
+  ]
 }

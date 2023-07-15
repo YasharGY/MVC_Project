@@ -4,7 +4,6 @@ using MailKit.Security;
 using Microsoft.Extensions.Options;
 using MimeKit;
 using MimeKit.Text;
-using System.Management;
 
 
 
@@ -18,13 +17,13 @@ public class EmailService : IEmailService
     {
         _emailSettings = emailSettings.Value;
     }
-    public void Send(string to, string subject, string html, string form = null)
+    public void Send(string to, string subject, string html, string from = null)
     {
         var email = new MimeMessage();
-        email.From.Add(MailboxAddress.Parse(form ?? _emailSettings.FormAddres));
+        email.From.Add(MailboxAddress.Parse(from ?? _emailSettings.FromAddres));
         email.To.Add(MailboxAddress.Parse(to));
         email.Subject = subject;
-        email.Body = new TextPart(MimeKit.Text.TextFormat.Html) { Text = html };
+        email.Body = new TextPart(TextFormat.Html) { Text = html };
 
         using var smtp = new SmtpClient();
         smtp.Connect(_emailSettings.Server, _emailSettings.Port, SecureSocketOptions.StartTls);

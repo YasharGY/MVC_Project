@@ -108,7 +108,7 @@
 				<div class="col-lg-4 col-md-6">
 					<div class="single-course">
 						<div class="course-img">
-							<a href="course-details.html">
+							<a asp-controller="CourseDetaile" asp-action="Index" asp-route-id="@courses.Id">
 								<img src="@courses.ImagePath" alt="course">
 								<div class="course-hover">
 									<i class="fa fa-link"></i>
@@ -147,7 +147,7 @@
 
 					<div class="single-event mb-35 ">
 						<div class="event-date">
-							<h3><a href="event-details.html">@levents.Day <span>@levents.Month</span></a></h3>
+							<h3><a asp-controller="EventDetaile" asp-action="Index" asp-route-id="@levents.Id">@levents.Day <span>@levents.Month</span></a></h3>
 						</div>
 						<div class="event-content text-start">
 							<div class="event-content-left">

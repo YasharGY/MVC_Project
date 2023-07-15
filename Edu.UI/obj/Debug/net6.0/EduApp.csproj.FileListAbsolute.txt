@@ -268,3 +268,4 @@ C:\Users\HP\Desktop\P233\P233\Edu.UI\Edu.UI\bin\Debug\net6.0\System.Text.Encodin
 C:\Users\HP\Desktop\P233\P233\Edu.UI\Edu.UI\bin\Debug\net6.0\runtimes\win\lib\netcoreapp2.0\System.Management.dll
 C:\Users\HP\Desktop\P233\P233\Edu.UI\Edu.UI\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.Security.Cryptography.Pkcs.dll
 C:\Users\HP\Desktop\P233\P233\Edu.UI\Edu.UI\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.Text.Encoding.CodePages.dll
+C:\Users\HP\Desktop\P233\P233\Edu.UI\Edu.UI\bin\Debug\net6.0\GoogleAuthentication.dll

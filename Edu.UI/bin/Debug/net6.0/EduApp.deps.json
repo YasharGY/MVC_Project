@@ -10,6 +10,7 @@
         "dependencies": {
           "AutoMapper.Extensions.Microsoft.DependencyInjection": "12.0.1",
           "Edu.DataAccess": "1.0.0",
+          "GoogleAuthentication": "1.0.0",
           "MailKit": "4.1.0",
           "MailKit.NET": "2.0.0",
           "Microsoft.EntityFrameworkCore.Tools": "6.0.19",
@@ -48,6 +49,17 @@
           "lib/net6.0/BouncyCastle.Cryptography.dll": {
             "assemblyVersion": "2.0.0.0",
             "fileVersion": "2.2.1.47552"
+          }
+        }
+      },
+      "GoogleAuthentication/1.0.0": {
+        "dependencies": {
+          "Newtonsoft.Json": "13.0.1"
+        },
+        "runtime": {
+          "lib/net46/GoogleAuthentication.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
           }
         }
       },
@@ -2214,6 +2226,7 @@
       },
       "Edu.Core/1.0.0": {
         "dependencies": {
+          "GoogleAuthentication": "1.0.0",
           "MailKit.NET": "2.0.0",
           "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "6.0.19"
         },
@@ -2224,6 +2237,7 @@
       "Edu.DataAccess/1.0.0": {
         "dependencies": {
           "Edu.Core": "1.0.0",
+          "GoogleAuthentication": "1.0.0",
           "MailKit.NET": "2.0.0",
           "Microsoft.EntityFrameworkCore": "6.0.19",
           "Microsoft.EntityFrameworkCore.SqlServer": "6.0.19"
@@ -2260,6 +2274,13 @@
       "sha512": "sha512-A6Zr52zVqJKt18ZBsTnX0qhG0kwIQftVAjLmszmkiR/trSp8H+xj1gUOzk7XHwaKgyREMSV1v9XaKrBUeIOdvQ==",
       "path": "bouncycastle.cryptography/2.2.1",
       "hashPath": "bouncycastle.cryptography.2.2.1.nupkg.sha512"
+    },
+    "GoogleAuthentication/1.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-o8etqL7SsgtLQpptUH1A6sHgufH3/LlSwZV0snQwPxelMqjH9fBXVe7AocWYU+Afjvf42CX0HWwQxrHoA2DL1Q==",
+      "path": "googleauthentication/1.0.0",
+      "hashPath": "googleauthentication.1.0.0.nupkg.sha512"
     },
     "Humanizer/2.14.1": {
       "type": "package",

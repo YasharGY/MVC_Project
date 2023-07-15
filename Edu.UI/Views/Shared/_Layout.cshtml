@@ -90,9 +90,18 @@
 											</ul>
 										</li>
 										<li>
+											<a asp-area="EduAdmin" asp-controller="Auth" asp-action="Login">Login</a>
+											<ul>
+												<li><a href="@ViewBag.response">Login with Google</a></li>
+												
+											</ul>
+										</li>
+
+										<li>
+											
 											@if (User.Identity.IsAuthenticated)
 											{
-												<a href="~/assets/blog.html">@User.Identity.Name</a>
+												<a >@User.Identity.Name</a>
 										<ul>
 												<li><a asp-area="EduAdmin" asp-controller="Auth" asp-action="Logout">Logout</a></li>
 										</ul>
@@ -109,7 +118,7 @@
 											
 										</li>
 											<li><a href="~/assets/contact.html">Contact</a></li>
-										<li><a href="~/assets/contact.html">Buy Now</a>
+										
 									</ul>
 								</nav>
 							</div>

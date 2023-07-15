@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using System.Runtime.InteropServices;
+using GoogleAuthentication.Services;
 
 namespace EduApp.Areas.EduAdmin.Controllers;
 [Area("EduAdmin")]
@@ -56,7 +57,7 @@ public class AuthController : Controller
         await _userManager.AddToRoleAsync(user, UserRole.Member);
         return RedirectToAction("Login");
     }
-    
+
     public IActionResult Login()
     {
         return View();
@@ -79,16 +80,26 @@ public class AuthController : Controller
             ModelState.AddModelError("", " Your account is locked. Try after!");
             return View(login);
         }
-        
-        
+
+
         if (!signInResult.Succeeded)
         {
             ModelState.AddModelError("", "Invalid Login!");
             return View(login);
         }
-        
-        return RedirectToAction("Index","Home", new { area = string.Empty });
+
+        return RedirectToAction("Index", "Home", new { area = string.Empty });
     }
+
+    public async Task<IActionResult> GoogleLoginCallBack(string code)
+    {
+        var clientId = "106159346041-jbfh25he9m5oafh0hrle91b091lecc2u.apps.googleusercontent.com";
+        var url = "https://localhost:7118/Auth/GoogleLoginCallBack";
+        var clientSecret = "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";
+        var token = await GoogleAuth.GetAuthAccessToken(code, clientId, clientSecret, url);
+        var userProfile = await GoogleAuth.GetProfileResponseAsync(token.AccessToken.ToString());
+        return RedirectToAction("Index", "Home", new { area = string.Empty });
+	}
 
     public async Task<IActionResult> Logout()
     {
@@ -135,7 +146,7 @@ public class AuthController : Controller
         await _userManager.ConfirmEmailAsync(user, token);
         await _signInManager.SignInAsync(user, false);
 
-        return RedirectToAction("Index", "Home");
+        return RedirectToAction("Index", "Home", new { area = "EduApp" });
     }
 
     public IActionResult ForgotPasswordConfirm()
@@ -156,7 +167,7 @@ public class AuthController : Controller
 
     [HttpPost]
     [ValidateAntiForgeryToken]
-    public async Task<IActionResult> ForgetPassword(FotgotPasswordVM forgotPasswordModel)
+    public async Task<IActionResult> ForgetPassword(ForgotPasswordVM forgotPasswordModel)
     {
         if (!ModelState.IsValid) return View(forgotPasswordModel);
 
@@ -168,7 +179,7 @@ public class AuthController : Controller
         }
 
         var token = await _userManager.GeneratePasswordResetTokenAsync(user);
-        var link = Url.Action(nameof(ConfirmEmail), "SiginUp", new { token, email = user.Email }, Request.Scheme, Request.Host.ToString());
+        var link = Url.Action(nameof(ConfirmEmail), "Auth", new { token, email = user.Email }, Request.Scheme, Request.Host.ToString());
 
         string subject = "Verfiy password reset email";
 
@@ -177,7 +188,7 @@ public class AuthController : Controller
         {
             html = reader.ReadToEnd();
         }
-
+        return Content(link);
 
         html = html.Replace("{{link}}", link);
         html = html.Replace("{{Account}}", "Hello");

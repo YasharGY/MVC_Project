@@ -10,24 +10,24 @@ using System.Configuration;
 namespace EduApp.Areas.EduAdmin.Controllers;
 [Area("EduAdmin")]
 
-    public class CourseController : Controller
+public class CourseController : Controller
+{
+    private readonly AppDbContext _context;
+    private readonly IMapper _mapper;
+    public CourseController(AppDbContext context, IMapper mapper)
     {
-	private readonly AppDbContext _context;
-	private readonly IMapper _mapper;
-	public CourseController(AppDbContext context, IMapper mapper)
-	{
-		_context = context;
-		_mapper = mapper;
-	}
-	public async Task<IActionResult> Index()
-	{
-		return View(await _context.Courses.ToArrayAsync());
-	}
+        _context = context;
+        _mapper = mapper;
+    }
+    public async Task<IActionResult> Index()
+    {
+        return View(await _context.Courses.ToArrayAsync());
+    }
 
-	public IActionResult Create()
-	{
-		return View();
-	}
+    public IActionResult Create()
+    {
+        return View();
+    }
     [HttpPost]
     [AutoValidateAntiforgeryToken]
     public async Task<IActionResult> Create(CoursePostVM coursePost)
@@ -42,31 +42,31 @@ namespace EduApp.Areas.EduAdmin.Controllers;
 
         return RedirectToAction(nameof(Index));
     }
-	public async Task<IActionResult> Delete(int id)
-	{
-		CoursesOffer coursedb = await _context.Courses.FindAsync(id);
-		if (coursedb == null)
-		{
-			return NotFound();
+    public async Task<IActionResult> Delete(int id)
+    {
+        CoursesOffer coursedb = await _context.Courses.FindAsync(id);
+        if (coursedb == null)
+        {
+            return NotFound();
 
-		}
-		return View(coursedb);
-	}
-	[HttpPost]
-	[ActionName("Delete")]
-	[AutoValidateAntiforgeryToken]
-	public async Task<IActionResult> DeletePost(int id)
-	{
-		CoursesOffer coursedb = await _context.Courses.FindAsync(id);
-		if (coursedb == null)
-		{
-			return NotFound();
+        }
+        return View(coursedb);
+    }
+    [HttpPost]
+    [ActionName("Delete")]
+    [AutoValidateAntiforgeryToken]
+    public async Task<IActionResult> DeletePost(int id)
+    {
+        CoursesOffer coursedb = await _context.Courses.FindAsync(id);
+        if (coursedb == null)
+        {
+            return NotFound();
 
-		}
-		_context.Courses.Remove(coursedb);
-		await _context.SaveChangesAsync();
-		return RedirectToAction(nameof(Index));
-	}
+        }
+        _context.Courses.Remove(coursedb);
+        await _context.SaveChangesAsync();
+        return RedirectToAction(nameof(Index));
+    }
     public async Task<IActionResult> Update(int id)
     {
         CoursesOffer coursedb = await _context.Courses.FindAsync(id);

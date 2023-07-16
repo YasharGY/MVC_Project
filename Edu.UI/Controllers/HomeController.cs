@@ -32,7 +32,7 @@ namespace EduApp.Controllers
 
 
 			var clientId = "106159346041-jbfh25he9m5oafh0hrle91b091lecc2u.apps.googleusercontent.com";
-			var url = "https://localhost:7118/Auth/GoogleLoginCallBack"; 
+			var url = "https://localhost:7118/Login/GoogleLoginCallBack"; 
 			var response = GoogleAuth.GetAuthUrl(clientId, url);
 			ViewBag.response = response;
 

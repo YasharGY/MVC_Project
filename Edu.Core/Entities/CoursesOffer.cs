@@ -7,6 +7,7 @@ namespace Edu.Core.Entities;
 
 public class CoursesOffer:IEntity
 {
+    [Key]
 	public int Id { get; set; } 
     public string ImagePath { get; set; } = null!;
     [Required,MaxLength(30)]
@@ -18,7 +19,7 @@ public class CoursesOffer:IEntity
     [ForeignKey("CategorieId")]
     public Categorie Categories { get; set; } 
 
-    /* EF Relation */
+    
     public CourseDetaile CoursesDetails { get; set; }
 
 

@@ -1,6 +1,6 @@
 ﻿namespace EduApp.Helpers;
 
-public class GoogleProfile
+public class GoogleUser
 {
 	public string Id { get; set; }
 	public string Name { get; set; }

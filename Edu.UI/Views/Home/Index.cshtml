@@ -151,14 +151,14 @@
 						</div>
 						<div class="event-content text-start">
 							<div class="event-content-left">
-								<h4><a href="event-details.html">@levents.Title</a></h4>
+								<h4><a asp-controller="EventDetaile" asp-action="Index" asp-route-id="@levents.Id">@levents.Title</a></h4>
 								<ul>
 									<li><i class="fa fa-clock-o"></i>@levents.Datetime</li>
 									<li><i class="fa fa-map-marker"></i>@levents.Location</li>
 								</ul>
 							</div>
 							<div class="event-content-right">
-								<a class="default-btn" href="event-details.html">join now</a>
+								<a class="default-btn" a asp-controller="EventDetaile" asp-action="Index" asp-route-id="@levents.Id">join now</a>
 							</div>
 						</div>
 					</div>
@@ -217,7 +217,7 @@
 				<div class="col-lg-4 col-md-6">
 					<div class="single-blog">
 						<div class="blog-img">
-							<a href="blog-details.html"><img src="@blogs.ImagePath" alt="blog"></a>
+							<a asp-controller="BlogDetaile" asp-action="Index" asp-route-id="@blogs.Id"><img src="@blogs.ImagePath" alt="blog"></a>
 							<div class="blog-hover">
 								<a href="blog-details.html"><i class="fa fa-link"></i></a>
 							</div>
